@@ -1,23 +1,10 @@
 # MacOS and Project stuff
 .DS_Store
-tmp/
-tmp_*
-tmux.conf
+Icon?
+
 # Application folders
 .idea/
 .vscode/
-
-# Configuration files
-config/*.json
-!config/base.json
-!config/test.json
-
-# Application output
-output/
-
-
-# Redis files
-dump.rdb
 
 # Python stuff (from https://github.com/github/gitignore/blob/master/Python.gitignore)
 ######################################################################################
