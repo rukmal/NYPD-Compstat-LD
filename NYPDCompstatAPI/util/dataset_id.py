@@ -20,17 +20,17 @@ def paramCheckWrapper(func):
 # requests to the NYPD Compstat REST API.
 
 @paramCheckWrapper
-def getDatasetID(time_period: str, crime: str) -> str:
-    return TIME_PREFIX[time_period] + ID_ROOT + CRIME[crime]
+def getDatasetID(time_period: str, map_id: str) -> str:
+    return TIME_PREFIX[time_period] + ID_ROOT + CRIME[map_id]
 
 
 @paramCheckWrapper
-def getCrimeGroupID(time_period: str, crime_group_id: str) -> str:
-    return TIME_PREFIX[time_period] + ID_ROOT + CRIME_GROUP[crime_group_id]
+def getCrimeGroupID(time_period: str, map_id: str) -> str:
+    return TIME_PREFIX[time_period] + ID_ROOT + CRIME_GROUP[map_id]
 
 
 @paramCheckWrapper
-def getApprehensionTypeID(time_period: str, apprehension_type_id: str) -> str:
+def getApprehensionTypeID(time_period: str, map_id: str) -> str:
     return TIME_PREFIX[time_period] + ID_ROOT + \
-        APPREHENSION_TYPE[apprehension_type_id]
+        APPREHENSION_TYPE[map_id]
 
