@@ -16,7 +16,8 @@ REQUEST_TYPE_MAP = {
     'day_of_week': 4,
     'timeline_7day': 16,
     'timeline_52week': 22,
-    'timeline_years': 23
+    'timeline_years': 23,
+    'location': 13
 }
 
 # Page cookies placeholder variable
