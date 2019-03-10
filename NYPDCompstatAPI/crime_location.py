@@ -29,8 +29,8 @@ def getCrimeLocation(crime: str, time_horizon: str) -> list:
         raw_text = parsed.select('.text-left > span')
 
         # Subtype and type
-        crime_loc['type'] = crime
-        crime_loc['subtype'] = raw_text[0].text
+        crime_loc['type'] = util.cleanLabel(dirty_label=crime)
+        crime_loc['subtype'] = util.cleanLabel(dirty_label=raw_text[0].text)
 
         # Parsing date and time
         parsed_datetime = util.parseDate(raw=raw_text[1].text)        
