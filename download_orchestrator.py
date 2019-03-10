@@ -21,11 +21,16 @@ incident_graph = Graph(identifier=CRIME_INSTANCE)
 crime_type_graph = Graph(identifier=CRIME_TYPE)
 
 # Binding prefixes to graph for readability
+# Incident Graph:
 incident_graph.bind('', BASE)
 incident_graph.bind('crime_type', CRIME_TYPE)
 incident_graph.bind('crime_subtype', CRIME_SUBTYPE)
 incident_graph.bind('geo', GEO)
 incident_graph.bind('georss', GEORSS)
+# Crime Type Graph:
+crime_type_graph.bind('', BASE)
+crime_type_graph.bind('crime_type', CRIME_TYPE)
+crime_type_graph.bind('crime_subtype', CRIME_SUBTYPE)
 
 def saveCrimeLocationToRDF(crime_locs: list):
     for crime in crime_locs:
@@ -43,7 +48,7 @@ def saveCrimeLocationToRDF(crime_locs: list):
         incident = BNode()
         # (incident, hasType, crimeType)
         incident_graph.add((incident, RDF.type, CRIME_TYPE[c_type]))
-        # (incident, hasSubType, crimeSubType)
+        # (incident, hasType, crimeSubType)
         incident_graph.add((incident, RDF.type, CRIME_SUBTYPE[subtype]))
         # (incident, hasDate, date)
         incident_graph.add((incident, FOAF.date, Literal(crime['date'],
@@ -55,8 +60,12 @@ def saveCrimeLocationToRDF(crime_locs: list):
         # Geographic coordinates
         point = BNode()
         incident_graph.add((point, RDF.type, GEO.Point))
-        incident_graph.add((point, GEO.lat, Literal(crime['latitude'])))
-        incident_graph.add((point, GEO.long, Literal(crime['longitude'])))
+        incident_graph.add((point, GEO.lat, Literal(
+            NYPDCompstatAPI.util.floatToStrWithDecimals(crime['latitude']),
+            datatype=XSD.decimal)))
+        incident_graph.add((point, GEO.long, Literal(
+            NYPDCompstatAPI.util.floatToStrWithDecimals(crime['longitude']),
+            datatype=XSD.decimal)))
 
         # Adding to incident graph
         incident_graph.add((incident, GEORSS.where, point))
