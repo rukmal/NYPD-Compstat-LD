@@ -10,6 +10,6 @@ def cleanLabel(dirty_label: str) -> str:
     """
 
     # Replace all specials with underscore
-    sub = [i if i.isalnum() else '_' for i in dirty_label]
+    kinda_dirty = ''.join([i if i.isalnum() else '_' for i in dirty_label])
 
-    return ''.join(sub)
+    return kinda_dirty.replace('__', '_')
