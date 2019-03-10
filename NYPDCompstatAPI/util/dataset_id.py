@@ -1,6 +1,5 @@
 from .request_key_map import *
 
-
 # Arbitrary ID root
 ID_ROOT = '_COMPLAINTS_'
 
