@@ -1,144 +1,147 @@
+@prefix : <http://htkg.stevens.edu> .
+@prefix crime_subtype: <http://htkg.stevens.edu/crime/subtype#> .
+@prefix crime_type: <http://htkg.stevens.edu/crime/type#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<http://htkg.stevens.edu/crime/subtype#Atm_Location> rdfs:subClassOf <http://htkg.stevens.edu/crime/type#robbery> .
+crime_subtype:Atm_Location rdfs:subClassOf crime_type:robbery .
 
-<http://htkg.stevens.edu/crime/subtype#Bank> rdfs:subClassOf <http://htkg.stevens.edu/crime/type#robbery> .
+crime_subtype:Bank rdfs:subClassOf crime_type:robbery .
 
-<http://htkg.stevens.edu/crime/subtype#Bank_Acct_Compro_> rdfs:subClassOf <http://htkg.stevens.edu/crime/type#grand_larceny> .
+crime_subtype:Bank_Acct_Compro_ rdfs:subClassOf crime_type:grand_larceny .
 
-<http://htkg.stevens.edu/crime/subtype#Bicycle> rdfs:subClassOf <http://htkg.stevens.edu/crime/type#robbery> .
+crime_subtype:Bicycle rdfs:subClassOf crime_type:robbery .
 
-<http://htkg.stevens.edu/crime/subtype#By_Acquiring_Los_> rdfs:subClassOf <http://htkg.stevens.edu/crime/type#grand_larceny> .
+crime_subtype:By_Acquiring_Los_ rdfs:subClassOf crime_type:grand_larceny .
 
-<http://htkg.stevens.edu/crime/subtype#By_Bank_Account__> rdfs:subClassOf <http://htkg.stevens.edu/crime/type#grand_larceny> .
+crime_subtype:By_Bank_Account__ rdfs:subClassOf crime_type:grand_larceny .
 
-<http://htkg.stevens.edu/crime/subtype#By_Dishonest_Emp_> rdfs:subClassOf <http://htkg.stevens.edu/crime/type#grand_larceny> .
+crime_subtype:By_Dishonest_Emp_ rdfs:subClassOf crime_type:grand_larceny .
 
-<http://htkg.stevens.edu/crime/subtype#By_Extortion> rdfs:subClassOf <http://htkg.stevens.edu/crime/type#grand_larceny> .
+crime_subtype:By_Extortion rdfs:subClassOf crime_type:grand_larceny .
 
-<http://htkg.stevens.edu/crime/subtype#By_False_Promise_> rdfs:subClassOf <http://htkg.stevens.edu/crime/type#grand_larceny> .
+crime_subtype:By_False_Promise_ rdfs:subClassOf crime_type:grand_larceny .
 
-<http://htkg.stevens.edu/crime/subtype#By_Identity_Thef_> rdfs:subClassOf <http://htkg.stevens.edu/crime/type#grand_larceny> .
+crime_subtype:By_Identity_Thef_ rdfs:subClassOf crime_type:grand_larceny .
 
-<http://htkg.stevens.edu/crime/subtype#By_Open_Bank_Acc_> rdfs:subClassOf <http://htkg.stevens.edu/crime/type#grand_larceny> .
+crime_subtype:By_Open_Bank_Acc_ rdfs:subClassOf crime_type:grand_larceny .
 
-<http://htkg.stevens.edu/crime/subtype#By_Open_Compromi_> rdfs:subClassOf <http://htkg.stevens.edu/crime/type#grand_larceny> .
+crime_subtype:By_Open_Compromi_ rdfs:subClassOf crime_type:grand_larceny .
 
-<http://htkg.stevens.edu/crime/subtype#By_Open_Credit_C_> rdfs:subClassOf <http://htkg.stevens.edu/crime/type#grand_larceny> .
+crime_subtype:By_Open_Credit_C_ rdfs:subClassOf crime_type:grand_larceny .
 
-<http://htkg.stevens.edu/crime/subtype#By_Theft_Of_Cred_> rdfs:subClassOf <http://htkg.stevens.edu/crime/type#grand_larceny> .
+crime_subtype:By_Theft_Of_Cred_ rdfs:subClassOf crime_type:grand_larceny .
 
-<http://htkg.stevens.edu/crime/subtype#Car_Jacking> rdfs:subClassOf <http://htkg.stevens.edu/crime/type#robbery> .
+crime_subtype:Car_Jacking rdfs:subClassOf crime_type:robbery .
 
-<http://htkg.stevens.edu/crime/subtype#Chain_Store> rdfs:subClassOf <http://htkg.stevens.edu/crime/type#robbery> .
+crime_subtype:Chain_Store rdfs:subClassOf crime_type:robbery .
 
-<http://htkg.stevens.edu/crime/subtype#Check_Cashing_Bu_> rdfs:subClassOf <http://htkg.stevens.edu/crime/type#robbery> .
+crime_subtype:Check_Cashing_Bu_ rdfs:subClassOf crime_type:robbery .
 
-<http://htkg.stevens.edu/crime/subtype#Commercial_Night> rdfs:subClassOf <http://htkg.stevens.edu/crime/type#burglary> .
+crime_subtype:Commercial_Night rdfs:subClassOf crime_type:burglary .
 
-<http://htkg.stevens.edu/crime/subtype#Commercial_Uncla_> rdfs:subClassOf <http://htkg.stevens.edu/crime/type#robbery> .
+crime_subtype:Commercial_Uncla_ rdfs:subClassOf crime_type:robbery .
 
-<http://htkg.stevens.edu/crime/subtype#Commercial_Unkno_> rdfs:subClassOf <http://htkg.stevens.edu/crime/type#burglary> .
+crime_subtype:Commercial_Unkno_ rdfs:subClassOf crime_type:burglary .
 
-<http://htkg.stevens.edu/crime/subtype#Commerical_Day> rdfs:subClassOf <http://htkg.stevens.edu/crime/type#burglary> .
+crime_subtype:Commerical_Day rdfs:subClassOf crime_type:burglary .
 
-<http://htkg.stevens.edu/crime/subtype#Credit_Card_Acco_> rdfs:subClassOf <http://htkg.stevens.edu/crime/type#grand_larceny> .
+crime_subtype:Credit_Card_Acco_ rdfs:subClassOf crime_type:grand_larceny .
 
-<http://htkg.stevens.edu/crime/subtype#Doctor_Dentist_O_> rdfs:subClassOf <http://htkg.stevens.edu/crime/type#robbery> .
+crime_subtype:Doctor_Dentist_O_ rdfs:subClassOf crime_type:robbery .
 
-<http://htkg.stevens.edu/crime/subtype#Dwelling> rdfs:subClassOf <http://htkg.stevens.edu/crime/type#robbery> .
+crime_subtype:Dwelling rdfs:subClassOf crime_type:robbery .
 
-<http://htkg.stevens.edu/crime/subtype#From_Building_N_> rdfs:subClassOf <http://htkg.stevens.edu/crime/type#grand_larceny> .
+crime_subtype:From_Building_N_ rdfs:subClassOf crime_type:grand_larceny .
 
-<http://htkg.stevens.edu/crime/subtype#From_Eatery_Una_> rdfs:subClassOf <http://htkg.stevens.edu/crime/type#grand_larceny> .
+crime_subtype:From_Eatery_Una_ rdfs:subClassOf crime_type:grand_larceny .
 
-<http://htkg.stevens.edu/crime/subtype#From_Motorcycle> rdfs:subClassOf <http://htkg.stevens.edu/crime/type#grand_larceny> .
+crime_subtype:From_Motorcycle rdfs:subClassOf crime_type:grand_larceny .
 
-<http://htkg.stevens.edu/crime/subtype#From_Night_Club__> rdfs:subClassOf <http://htkg.stevens.edu/crime/type#grand_larceny> .
+crime_subtype:From_Night_Club__ rdfs:subClassOf crime_type:grand_larceny .
 
-<http://htkg.stevens.edu/crime/subtype#From_Open_Areas__> rdfs:subClassOf <http://htkg.stevens.edu/crime/type#grand_larceny> .
+crime_subtype:From_Open_Areas__ rdfs:subClassOf crime_type:grand_larceny .
 
-<http://htkg.stevens.edu/crime/subtype#From_Person_Lus_> rdfs:subClassOf <http://htkg.stevens.edu/crime/type#grand_larceny> .
+crime_subtype:From_Person_Lus_ rdfs:subClassOf crime_type:grand_larceny .
 
-<http://htkg.stevens.edu/crime/subtype#From_Person_Pic_> rdfs:subClassOf <http://htkg.stevens.edu/crime/type#grand_larceny> .
+crime_subtype:From_Person_Pic_ rdfs:subClassOf crime_type:grand_larceny .
 
-<http://htkg.stevens.edu/crime/subtype#From_Person_Pur_> rdfs:subClassOf <http://htkg.stevens.edu/crime/type#grand_larceny> .
+crime_subtype:From_Person_Pur_ rdfs:subClassOf crime_type:grand_larceny .
 
-<http://htkg.stevens.edu/crime/subtype#From_Person_Unc_> rdfs:subClassOf <http://htkg.stevens.edu/crime/type#grand_larceny> .
+crime_subtype:From_Person_Unc_ rdfs:subClassOf crime_type:grand_larceny .
 
-<http://htkg.stevens.edu/crime/subtype#From_Person__Ba_> rdfs:subClassOf <http://htkg.stevens.edu/crime/type#grand_larceny> .
+crime_subtype:From_Person__Ba_ rdfs:subClassOf crime_type:grand_larceny .
 
-<http://htkg.stevens.edu/crime/subtype#From_Pier_Unatt_> rdfs:subClassOf <http://htkg.stevens.edu/crime/type#grand_larceny> .
+crime_subtype:From_Pier_Unatt_ rdfs:subClassOf crime_type:grand_larceny .
 
-<http://htkg.stevens.edu/crime/subtype#From_Residence__> rdfs:subClassOf <http://htkg.stevens.edu/crime/type#grand_larceny> .
+crime_subtype:From_Residence__ rdfs:subClassOf crime_type:grand_larceny .
 
-<http://htkg.stevens.edu/crime/subtype#From_Retail_Stor_> rdfs:subClassOf <http://htkg.stevens.edu/crime/type#grand_larceny> .
+crime_subtype:From_Retail_Stor_ rdfs:subClassOf crime_type:grand_larceny .
 
-<http://htkg.stevens.edu/crime/subtype#From_Store_Shop_> rdfs:subClassOf <http://htkg.stevens.edu/crime/type#grand_larceny> .
+crime_subtype:From_Store_Shop_ rdfs:subClassOf crime_type:grand_larceny .
 
-<http://htkg.stevens.edu/crime/subtype#From_Truck_Unat_> rdfs:subClassOf <http://htkg.stevens.edu/crime/type#grand_larceny> .
+crime_subtype:From_Truck_Unat_ rdfs:subClassOf crime_type:grand_larceny .
 
-<http://htkg.stevens.edu/crime/subtype#Gas_Station> rdfs:subClassOf <http://htkg.stevens.edu/crime/type#robbery> .
+crime_subtype:Gas_Station rdfs:subClassOf crime_type:robbery .
 
-<http://htkg.stevens.edu/crime/subtype#Home_Invasion> rdfs:subClassOf <http://htkg.stevens.edu/crime/type#robbery> .
+crime_subtype:Home_Invasion rdfs:subClassOf crime_type:robbery .
 
-<http://htkg.stevens.edu/crime/subtype#Licensed_For_Hir_> rdfs:subClassOf <http://htkg.stevens.edu/crime/type#robbery> .
+crime_subtype:Licensed_For_Hir_ rdfs:subClassOf crime_type:robbery .
 
-<http://htkg.stevens.edu/crime/subtype#Murder_Homicide> rdfs:subClassOf <http://htkg.stevens.edu/crime/type#murder> .
+crime_subtype:Murder_Homicide rdfs:subClassOf crime_type:murder .
 
-<http://htkg.stevens.edu/crime/subtype#Of_Bicycle> rdfs:subClassOf <http://htkg.stevens.edu/crime/type#grand_larceny> .
+crime_subtype:Of_Bicycle rdfs:subClassOf crime_type:grand_larceny .
 
-<http://htkg.stevens.edu/crime/subtype#Of_Truck_Driver> rdfs:subClassOf <http://htkg.stevens.edu/crime/type#robbery> .
+crime_subtype:Of_Truck_Driver rdfs:subClassOf crime_type:robbery .
 
-<http://htkg.stevens.edu/crime/subtype#Of_Vehicle_Motor_> rdfs:subClassOf <http://htkg.stevens.edu/crime/type#grand_larceny> .
+crime_subtype:Of_Vehicle_Motor_ rdfs:subClassOf crime_type:grand_larceny .
 
-<http://htkg.stevens.edu/crime/subtype#On_Bus_Or_Bus_Dr_> rdfs:subClassOf <http://htkg.stevens.edu/crime/type#robbery> .
+crime_subtype:On_Bus_Or_Bus_Dr_ rdfs:subClassOf crime_type:robbery .
 
-<http://htkg.stevens.edu/crime/subtype#Open_Area_Unclas_> rdfs:subClassOf <http://htkg.stevens.edu/crime/type#robbery> .
+crime_subtype:Open_Area_Unclas_ rdfs:subClassOf crime_type:robbery .
 
-<http://htkg.stevens.edu/crime/subtype#Payroll> rdfs:subClassOf <http://htkg.stevens.edu/crime/type#robbery> .
+crime_subtype:Payroll rdfs:subClassOf crime_type:robbery .
 
-<http://htkg.stevens.edu/crime/subtype#Person_Neck_Cha_> rdfs:subClassOf <http://htkg.stevens.edu/crime/type#grand_larceny> .
+crime_subtype:Person_Neck_Cha_ rdfs:subClassOf crime_type:grand_larceny .
 
-<http://htkg.stevens.edu/crime/subtype#Personal_Electro_> rdfs:subClassOf <http://htkg.stevens.edu/crime/type#grand_larceny>,
-        <http://htkg.stevens.edu/crime/type#robbery> .
+crime_subtype:Personal_Electro_ rdfs:subClassOf crime_type:grand_larceny,
+        crime_type:robbery .
 
-<http://htkg.stevens.edu/crime/subtype#Public_Place_Ins_> rdfs:subClassOf <http://htkg.stevens.edu/crime/type#robbery> .
+crime_subtype:Public_Place_Ins_ rdfs:subClassOf crime_type:robbery .
 
-<http://htkg.stevens.edu/crime/subtype#ROBBERY_SHOPLIF_> rdfs:subClassOf <http://htkg.stevens.edu/crime/type#robbery> .
+crime_subtype:ROBBERY_SHOPLIF_ rdfs:subClassOf crime_type:robbery .
 
-<http://htkg.stevens.edu/crime/subtype#Rape_1> rdfs:subClassOf <http://htkg.stevens.edu/crime/type#rape> .
+crime_subtype:Rape_1 rdfs:subClassOf crime_type:rape .
 
-<http://htkg.stevens.edu/crime/subtype#Rape_1_Attempt> rdfs:subClassOf <http://htkg.stevens.edu/crime/type#rape> .
+crime_subtype:Rape_1_Attempt rdfs:subClassOf crime_type:rape .
 
-<http://htkg.stevens.edu/crime/subtype#Rape_2> rdfs:subClassOf <http://htkg.stevens.edu/crime/type#rape> .
+crime_subtype:Rape_2 rdfs:subClassOf crime_type:rape .
 
-<http://htkg.stevens.edu/crime/subtype#Rape_3> rdfs:subClassOf <http://htkg.stevens.edu/crime/type#rape> .
+crime_subtype:Rape_3 rdfs:subClassOf crime_type:rape .
 
-<http://htkg.stevens.edu/crime/subtype#Residence_Day> rdfs:subClassOf <http://htkg.stevens.edu/crime/type#burglary> .
+crime_subtype:Residence_Day rdfs:subClassOf crime_type:burglary .
 
-<http://htkg.stevens.edu/crime/subtype#Residence_Night> rdfs:subClassOf <http://htkg.stevens.edu/crime/type#burglary> .
+crime_subtype:Residence_Night rdfs:subClassOf crime_type:burglary .
 
-<http://htkg.stevens.edu/crime/subtype#Residence_Unknow_> rdfs:subClassOf <http://htkg.stevens.edu/crime/type#burglary> .
+crime_subtype:Residence_Unknow_ rdfs:subClassOf crime_type:burglary .
 
-<http://htkg.stevens.edu/crime/subtype#Residential_Comm_> rdfs:subClassOf <http://htkg.stevens.edu/crime/type#robbery> .
+crime_subtype:Residential_Comm_ rdfs:subClassOf crime_type:robbery .
 
-<http://htkg.stevens.edu/crime/subtype#Strangulation_1s_> rdfs:subClassOf <http://htkg.stevens.edu/crime/type#felony_assault> .
+crime_subtype:Strangulation_1s_ rdfs:subClassOf crime_type:felony_assault .
 
-<http://htkg.stevens.edu/crime/subtype#Truck_Day> rdfs:subClassOf <http://htkg.stevens.edu/crime/type#burglary> .
+crime_subtype:Truck_Day rdfs:subClassOf crime_type:burglary .
 
-<http://htkg.stevens.edu/crime/subtype#Truck_Night> rdfs:subClassOf <http://htkg.stevens.edu/crime/type#burglary> .
+crime_subtype:Truck_Night rdfs:subClassOf crime_type:burglary .
 
-<http://htkg.stevens.edu/crime/subtype#Unclassified> rdfs:subClassOf <http://htkg.stevens.edu/crime/type#felony_assault> .
+crime_subtype:Unclassified rdfs:subClassOf crime_type:felony_assault .
 
-<http://htkg.stevens.edu/crime/subtype#Unclassified_Day> rdfs:subClassOf <http://htkg.stevens.edu/crime/type#burglary> .
+crime_subtype:Unclassified_Day rdfs:subClassOf crime_type:burglary .
 
-<http://htkg.stevens.edu/crime/subtype#Unclassified_Nig_> rdfs:subClassOf <http://htkg.stevens.edu/crime/type#burglary> .
+crime_subtype:Unclassified_Nig_ rdfs:subClassOf crime_type:burglary .
 
-<http://htkg.stevens.edu/crime/subtype#Unclassified_Unk_> rdfs:subClassOf <http://htkg.stevens.edu/crime/type#burglary> .
+crime_subtype:Unclassified_Unk_ rdfs:subClassOf crime_type:burglary .
 
-<http://htkg.stevens.edu/crime/subtype#Unknown_Time> rdfs:subClassOf <http://htkg.stevens.edu/crime/type#burglary> .
+crime_subtype:Unknown_Time rdfs:subClassOf crime_type:burglary .
 
