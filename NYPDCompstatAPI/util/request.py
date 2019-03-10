@@ -1,9 +1,12 @@
 import json
 import requests
+from selenium import webdriver
+from selenium.webdriver.chrome.options import Options
+from selenium.webdriver.support.ui import WebDriverWait
 
 
 # Base API URL (needs substitution from dictionary below)
-BASE_URL = 'http://compstat.nypd.org/api/reports/{0}/datasource/list'
+BASE_URL = 'https://compstat.nypdonline.org/api/reports/{0}/datasource/list'
 
 # Mapping of request types to URL substitution number
 REQUEST_TYPE_MAP = {
@@ -15,6 +18,9 @@ REQUEST_TYPE_MAP = {
     'timeline_52week': 22,
     'timeline_years': 23
 }
+
+# Page cookies placeholder variable
+PAGE_COOKIES = None
 
 
 def makeRequest(request_type: str, dataset_id: str) -> dict:
@@ -35,18 +41,27 @@ def makeRequest(request_type: str, dataset_id: str) -> dict:
     # Checking if valid request type, raise error if not
     if request_type not in REQUEST_TYPE_MAP: raise KeyError
 
+    # Isolating global PAGE_COOKIES variable
+    global PAGE_COOKIES
+
+    # Check if cookies are assigned, if not run selenium and get cookies
+    if PAGE_COOKIES is None:
+        PAGE_COOKIES = __getCookies()
+
     # Building request URL
-    r_url = BASE_URL.format(request_type)
+    r_url = BASE_URL.format(REQUEST_TYPE_MAP[request_type])
 
     # Building request parameters
     r_params = __buildRequestParams(dataset_id)
 
     try:
         # Making request
-        r = requests.post(r_url, data=__buildRequestParams(r_params))
-    except Exception:
+        r = requests.post(r_url, json=r_params, cookies=PAGE_COOKIES,
+                          verify=False)
+    except Exception as e:
+        print(e)
         return None
-    
+
     return json.loads(r.text)
 
 
@@ -77,3 +92,41 @@ def __buildRequestParams(dataset_id: str) -> dict:
             'values': [dataset_id]
         }]
     }
+
+
+def __getCookies() -> dict:
+    """Function to load the base page in Selenium, and extract cookies
+    computed from the JSON.
+    
+    Returns:
+        dict -- Dictionary of cookies.
+    """
+
+    # Setting options for headless Selenium Chrome
+    chrome_options = Options()
+    chrome_options.add_argument('--headless')
+
+    # Creating webdriver
+    driver = webdriver.Chrome(options=chrome_options)
+    # driver = Chrome(options=chrome_options)
+    driver.get('https://compstat.nypdonline.org')  # Accessing base site
+
+    # Wait function to wait until page cookies are done populating
+    class cookieWait():
+        def __init__(self, driver):
+            pass
+
+        def __call__(self, driver):
+            try:
+                return driver.get_cookies()
+            except:
+                return False
+
+    # Isolating cookies
+    wait = WebDriverWait(driver, 10)
+    cookies = wait.until(cookieWait(driver))
+
+    # Building cookies dictionary
+    cookies_dict = {i['name']: i['value'] for i in cookies}
+
+    return cookies_dict
